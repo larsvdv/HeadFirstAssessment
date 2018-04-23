@@ -20,7 +20,8 @@ public class Station {
 	private void vulTrein(Trein trein) {
 		while (!perron.isEmpty()) {
 			Nameable opgestapelde = perron.pop();
-			trein.instappen(opgestapelde);
+			trein.instappeneersteklas(opgestapelde);
+			trein.instappentweedeklas(opgestapelde);
 		}
 	}
 }
