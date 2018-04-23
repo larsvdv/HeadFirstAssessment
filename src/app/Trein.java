@@ -2,6 +2,7 @@ package app;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Trein {
 	
@@ -63,5 +64,13 @@ public class Trein {
 	
 	public String toString() {
 		return "Er zitten " + getCount() + " mensen in de trein.";
+	}
+
+	public void printNames() {
+		System.out.println("Deze mensen zitten in de trein:");
+		for (Map.Entry<String, Nameable> entry : stoelen.entrySet()) {
+			String key = entry.getKey();
+			System.out.println("- " + key);
+		}
 	}
 }
